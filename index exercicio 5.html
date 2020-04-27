@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <h1>Exercício numero 5</h1>    
+    </head>
+    <body>
+        <script>
+            /*Escreva uma função que produza o seguinte resultado:
+O Diego possui as habilidades: Javascript, ReactJS, Redux
+O Gabriel possui as habilidades: VueJS, Ruby on Rails, Elixir
+Dica: Para percorrer um vetor você deve utilizar a sintaxe for...of 
+e para unir valores de um array
+com um separador utilize o join.*/
+            
+            var usuarios = [ 
+            { nome: "Diego", habilidades: ["Javascript", "ReactJS", "Redux"]},
+            { nome: "Gabriel", habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+            }
+            ];
+
+            var diego = usuarios.find(function (item) {return item.nome === 'Diego'})
+            var gabriel = usuarios.find(function (item) {return item.nome === 'Gabriel'})
+            
+
+
+            function showMessage () {
+                for (usuario of usuarios){
+                console.log('O ' + usuario.nome + ' Possui as seguintes habilidades: ' + usuario.habilidades.join(','))
+            }
+            }
+            
+    </script>
+            <button onclick=alert(showMessage())></button>Clique</button>
+
+    </body>
+</html>
